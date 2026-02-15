@@ -21,7 +21,7 @@ function getEmployees(list) {
   return items.map((item) => {
     const nameEl = item.querySelector('.name').textContent.trim();
     const positionEl = item.querySelector('.position').textContent.trim();
-    const salaryEl = parseSalary(item.querySelector('.salary'));
+    const salaryEl = parseSalary(item);
     const ageEl = Number(item.querySelector('.age').textContent.trim());
 
     return {
@@ -33,8 +33,8 @@ function getEmployees(list) {
   });
 }
 
-const emloyeesList = document.querySelector('ul');
+const employeesList = document.querySelector('ul');
 
-sortList(emloyeesList);
+sortList(employeesList);
 
-getEmployees(emloyeesList);
+getEmployees(employeesList);
